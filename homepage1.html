@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <script>
+
+function login(){
+    var password = '1111';
+    var inputPassword = prompt('password?');
+    if(password === inputPassword) {
+        alert('주인님 어서오세요~');
+        var utterance = new SpeechSynthesisUtterance('주인님 어서오세요');
+        window.speechSynthesis.speak(utterance);
+    } else {
+        alert('누구세요?');
+        var utterance = new SpeechSynthesisUtterance('누구세요?');
+        window.speechSynthesis.speak(utterance);
+        document.querySelector('body').className = 'hinge';
+    }
+}
+    </script>
+</head>
+
+<body>
+    <h2 style="color: powerblue; font-size:300">JAVA가 궁금하시면 눌러주세요</h2>
+    <form action="https://www.google.com/search">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Roboto+Slab&display=swap" rel="stylesheet">
+    <input type="hidden" name="as_sitesearch" value="opentutorials.org">
+    <input type="text" name="q" value="">
+    <input type="submit">
+    </form>
+
+    <h1><a href="index.html">WEB</a></h1>
+
+    <input type="button" value="login" onclick="
+        login();
+    ">
+    <h1><a href="/index.html" id="a1">Hello world</a></h1>
+
+    <h3>SWITCH</h3>
+    <a href="http://w3c.org"></a>
+
+        <style>
+            div{
+                border:1px solid rgb(4, 0, 255);
+            }
+            #container{
+                display:grid;
+                grid-template-columns: 100px 1fr 200px; 
+            }
+            body {
+              border:5px;
+              /* padding:10px; */
+              /* margin:50px; */
+              height:200px;
+              font-family: 'Merriweather', serif;
+            }
+       
+            body {
+             border:5px;
+             height:200px;
+             font-family: 'Merriweather', serif;
+    }
+        </style>
+
+    <!-- unordered list -->
+    <script>
+        var bodyTag = document.querySelector('body');
+    </script>
+    
+    <input type="button" value="night" onclick="
+    // 만약에 this.value 값이 night라면 
+    var links = document.querySelectorAll('a');
+    if(this.value === 'night'){
+        
+        bodyTag.style.backgroundColor = 'black';
+        bodyTag.style.color = 'white';
+        this.value = 'day';
+        var i = 0;
+        while(i<links.length) {
+            links[i].style.color = 'white';
+            i = i + 1;
+        }
+    // 그렇지 않다면
+    } else {
+        bodyTag.style.backgroundColor = 'white';
+        bodyTag.style.color = 'black';
+        this.value = 'night';
+        var i = 0;
+        while(i<links.length) {
+            links[i].style.color = 'black';
+            i = i + 1;
+        }
+    }
+    
+">
+ <h2>성공코딩</h2>
+    <ol>
+        <li><a href="DAY2.html"  id="a2">html</a></li>
+        <img src = "aa.jpg" height="100" width="200">
+        <li><a href="DAY3.html" id="a3">css</a></li>
+        <img src = "bb.jpg" height="100" width="200">
+        <li><a href="DAY4.html" id="a4">js</a></li>
+        <img src = "cc.jpg" height="100" width="200">
+    </ol>
+   
+    <h2>HUMOR</h2>
+    <iframe width="400" height="300" src="https://www.youtube.com/embed/8f-N_Hf1ULs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <input type = "text" id = "cost">
+    <input type ="button" value="calculate" onclick="
+        fetch('https://api.exchangeratesapi.io/latest')
+        .then(function(result){return result.json()})
+        .then(function(json){  
+        alert(json.rates.KRW * document.querySelector('#cost').value);
+        })
+    ">
+    
+</body>
+
+</html>
